@@ -96,7 +96,7 @@ For each contact retrieved, the script sends an email using the SendGrid API. Th
 
 At the bottom of the script, there's a commented-out configuration that would schedule the script to run every 4 hours, Monday through Friday, if deployed on Railway.
 
-### Monday.com dashboard with the data
+### Monday.com dashboard with data
 ![image](https://github.com/user-attachments/assets/ff61b87a-7d41-4b02-aba5-9515eac738da)
 
 
@@ -106,7 +106,7 @@ At the bottom of the script, there's a commented-out configuration that would sc
 
 The output successfully fetches and displays the data from the Monday.com API, and is able to send an email to the corresponding emails listed, as indicated with status code: 202
 
-### Emails being received to the correseponding emails
+### Emails being received to the corresponding emails
 
 ![image](https://github.com/user-attachments/assets/8cf2e58f-9f13-42c2-809d-cf847b56f737)
  
