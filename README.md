@@ -67,3 +67,19 @@ For each contact retrieved, the script sends an email using the SendGrid API. Th
 ### 3. Railway CI/CD Configuration (Bonus):
 
 At the bottom of the script, there's a commented-out configuration that would schedule the script to run every 4 hours, Monday through Friday, if deployed on Railway.
+
+The following is the Monday.com dashboard with the data:
+![image](https://github.com/user-attachments/assets/ff61b87a-7d41-4b02-aba5-9515eac738da)
+
+
+The following is the output upon running the script:
+
+![image](https://github.com/user-attachments/assets/6d8a3c15-4123-47b2-a6cf-1df00efe5c1a)
+
+The following is the emails being received to the correseponding emails:
+
+![image](https://github.com/user-attachments/assets/8cf2e58f-9f13-42c2-809d-cf847b56f737)
+ 
+![image](https://github.com/user-attachments/assets/d2dcf09c-442e-4aeb-a7e1-fdfd34b35cfe)
+
+
