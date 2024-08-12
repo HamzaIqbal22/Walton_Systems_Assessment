@@ -47,7 +47,23 @@ export MONDAY_API_TOKEN=your_monday_api_token_here
 export SENDGRID_API_KEY=your_sendgrid_api_key_here
 ```
 
-5. Verify SendGrid Sender Email
+### 5. Verify SendGrid Sender Email
 Verify the sender email (from_email) used in the script is verified through your SendGrid account. This can be done on the sendgrid website within the "Sender Verification" section under "Settings".
 
 ![image](https://github.com/user-attachments/assets/2e487509-9b4c-4efb-860a-d97a87bede10)
+
+## Explanation and Output Results
+
+The monday_api.py script does the following:
+
+### 1. Fetch Data from Monday.com:
+
+Queries the Monday.com board to retrieve contact information such as names, emails, and email content from the "Active Contacts" group.
+
+### 2. Send Emails using SendGrid:
+
+For each contact retrieved, the script sends an email using the SendGrid API. The email's subject line is personalized with the contact's name, and the body contains the specific message retrieved from the board.
+
+### 3. Railway CI/CD Configuration (Bonus):
+
+At the bottom of the script, there's a commented-out configuration that would schedule the script to run every 4 hours, Monday through Friday, if deployed on Railway.
