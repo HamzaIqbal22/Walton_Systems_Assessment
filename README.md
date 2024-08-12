@@ -33,6 +33,7 @@ pip install requests sendgrid python-dotenv
 You will need API keys for both Monday.com and SendGrid:
 
 Monday.com API Key: Obtain this from your Monday.com account under the API section.
+
 SendGrid API Key: Sign up for a SendGrid account and create an API key with "Full Access" permissions.
 
 ### 4. Environment Variables
@@ -95,17 +96,17 @@ For each contact retrieved, the script sends an email using the SendGrid API. Th
 
 At the bottom of the script, there's a commented-out configuration that would schedule the script to run every 4 hours, Monday through Friday, if deployed on Railway.
 
-#### Monday.com dashboard with the data
+### Monday.com dashboard with the data
 ![image](https://github.com/user-attachments/assets/ff61b87a-7d41-4b02-aba5-9515eac738da)
 
 
-#### Terminal output of monday_api.py script
+### Terminal output of monday_api.py script
 
 ![image](https://github.com/user-attachments/assets/6d8a3c15-4123-47b2-a6cf-1df00efe5c1a)
 
 The output successfully fetches and displays the data from the Monday.com API, and is able to send an email to the corresponding emails listed, as indicated with status code: 202
 
-#### Emails being received to the correseponding emails
+### Emails being received to the correseponding emails
 
 ![image](https://github.com/user-attachments/assets/8cf2e58f-9f13-42c2-809d-cf847b56f737)
  
