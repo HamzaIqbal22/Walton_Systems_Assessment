@@ -3,11 +3,10 @@ import requests
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
-# Set your API tokens
+# Set up API tokens and board ID
 monday_api_token = os.getenv("MONDAY_API_TOKEN")
 sendgrid_api_key = os.getenv("SENDGRID_API_KEY")
 
-# Replace with your actual board ID
 board_id = "7209817422"
 
 # Set up the headers for the Monday.com API request
@@ -38,8 +37,6 @@ query = """
 
 # Make the request to the Monday.com API
 response = requests.post("https://api.monday.com/v2", json={'query': query}, headers=headers)
-
-# Print the raw response for debugging purposes
 print("Raw response:", response.text)
 
 contacts = []
@@ -56,9 +53,9 @@ if response.status_code == 200:
                     email = None
                     email_content = None
                     for column_value in item['column_values']:
-                        if column_value['id'] == 'contact_email':  # Match the ID for the Email column
+                        if column_value['id'] == 'contact_email':  
                             email = column_value['text']
-                        elif column_value['id'] == 'long_text4':  # Match the ID for the Email Content column
+                        elif column_value['id'] == 'long_text4':  
                             email_content = column_value['text']
                     if email and email_content:
                         contacts.append({
@@ -97,6 +94,7 @@ def send_email(to_email, subject, content):
 for contact in contacts:
     send_email(contact["email"], f"Hello {contact['name']}", contact["content"])
 
+# **Bonus Section**
 # Railway config to run the script every 4 hours, Monday to Friday
 # [scripts.scheduler]
 # command = "python monday_api.py"
