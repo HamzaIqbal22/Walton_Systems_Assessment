@@ -13,9 +13,9 @@ Additionally, a bonus task is included, which involves setting up a Railway CI/C
 
 To run this project, you will need the following:
 
-### 1. **Python 3.x**
+### 1. **Python 3**
 
-Ensure that Python 3.x is installed on your system. You can download it from [python.org](https://www.python.org/downloads/).
+Ensure that Python 3 is installed on your system. You can download it from [python.org](https://www.python.org/downloads/).
 
 ### 2. **Python Libraries**
 
@@ -23,7 +23,6 @@ You will need to install the following Python libraries:
 
 - `requests`: To interact with the Monday.com API.
 - `sendgrid`: To send emails using the SendGrid API.
-- `python-dotenv` (optional): To manage environment variables through a `.env` file.
 
 Install the required libraries using pip:
 
